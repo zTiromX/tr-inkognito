@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Privacy Mode for Trade Republic",
+  "version": "1.0",
+  "description": "Automatically hides sensitive account balances on the Trade Republic web app to ensure privacy in public spaces.",
+  "permissions": ["activeTab", "scripting", "storage"],
+  "host_permissions": [
+    "https://app.traderepublic.com/*"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.traderepublic.com/*"],
+      "js": ["content.js"],
+      "css": ["style.css"]
+    }
+  ]
+}
